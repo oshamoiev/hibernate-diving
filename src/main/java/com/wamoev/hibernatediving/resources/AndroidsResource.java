@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("api/androids")
-public class AndroidResource {
+public class AndroidsResource {
 
     private final AndroidRepository androidRepository;
 
-    public AndroidResource(AndroidRepository androidRepository) {
+    public AndroidsResource(AndroidRepository androidRepository) {
         this.androidRepository = androidRepository;
     }
 
