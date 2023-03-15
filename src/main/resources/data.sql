@@ -5,10 +5,11 @@ VALUES ('Marusya');
 INSERT INTO names (name)
 VALUES ('Lyoha');
 
-INSERT INTO heads (description)
-VALUES ('The best head ever');
+INSERT INTO androids (name_id)
+VALUES (1);
 
-INSERT INTO androids (name_id, head_id)
-VALUES (1, 1);
+INSERT INTO heads (description, android_id)
+VALUES ('The best head ever', 1);
+
 
 

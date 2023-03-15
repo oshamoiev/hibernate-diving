@@ -10,23 +10,23 @@ CREATE TABLE names
     PRIMARY KEY (id)
 );
 
-CREATE TABLE heads
-(
-    id          integer GENERATED ALWAYS AS IDENTITY,
-    description text,
-
-    PRIMARY KEY (id)
-);
-
 CREATE TABLE androids
 (
     id      integer GENERATED ALWAYS AS IDENTITY,
     name_id integer,
-    head_id integer,
 
     FOREIGN KEY (name_id) REFERENCES names (id),
-    FOREIGN KEY (head_id) REFERENCES heads (id),
     PRIMARY KEY (id)
+);
+
+CREATE TABLE heads
+(
+    id          integer GENERATED ALWAYS AS IDENTITY,
+    description text,
+    android_id integer NOT NULL,
+
+    PRIMARY KEY (id),
+    FOREIGN KEY (android_id) REFERENCES androids(id) ON DELETE CASCADE
 );
 
 

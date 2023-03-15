@@ -15,7 +15,7 @@ public class Android {
     @ManyToOne
     private Name name;
 
-    @OneToOne
+    @OneToOne(mappedBy = "android")
     private Head head;
 
     public Integer getId() {

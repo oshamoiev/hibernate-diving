@@ -2,6 +2,7 @@ package com.wamoev.hibernatediving.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -12,6 +13,9 @@ public class Head {
     private Integer id;
 
     private String description;
+
+    @OneToOne
+    private Android android;
 
     public Integer getId() {
         return id;
