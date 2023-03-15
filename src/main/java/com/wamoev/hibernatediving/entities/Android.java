@@ -40,11 +40,8 @@ public class Android {
         return head;
     }
 
-    public Set<Group> getGroups() {
-        return groups;
-    }
+//    public Set<Group> getGroups() {
+//        return groups;
+//    }
 
-    public void setGroups(Set<Group> groups) {
-        this.groups = groups;
-    }
 }

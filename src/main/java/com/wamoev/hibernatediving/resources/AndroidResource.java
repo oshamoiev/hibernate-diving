@@ -17,6 +17,11 @@ public class AndroidResource {
         this.androidRepository = androidRepository;
     }
 
+    @GetMapping
+    public Iterable<Android> getAll() {
+        return androidRepository.findAll();
+    }
+
     @GetMapping("/{id}")
     public Android getById(@PathVariable Integer id) {
         Android android = androidRepository.findById(id).get();
